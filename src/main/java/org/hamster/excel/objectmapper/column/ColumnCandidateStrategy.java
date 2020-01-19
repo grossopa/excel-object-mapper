@@ -11,6 +11,4 @@ package org.hamster.excel.objectmapper.column;
  */
 public enum ColumnCandidateStrategy {
     FIELD, GETTER;
-    
-    
 }

@@ -152,7 +152,22 @@ public enum CellValueType {
         R applyBlank(T input);
 
         R applyError(T input);
+    }
 
+    public static interface BiFunc<T, U, R> {
+        R applyNumeric(T input1, U input2);
+
+        R applyInteger(T input1, U input2);
+
+        R applyDate(T input1, U input2);
+
+        R applyString(T input1, U input2);
+
+        R applyBoolean(T input1, U input2);
+
+        R applyBlank(T input1, U input2);
+
+        R applyError(T input1, U input2);
     }
 
 }

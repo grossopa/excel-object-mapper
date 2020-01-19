@@ -36,7 +36,6 @@ public class DefaultColumnCandidateProviderTest {
         assertTrue(candidates.stream().anyMatch(c -> "fff2".equals(c.getName())));
         assertTrue(candidates.stream().anyMatch(c -> "filedApple333".equals(c.getName())));
         assertTrue(candidates.stream().anyMatch(c -> "someGetter".equals(c.getName())));
-
     }
 
 }
@@ -45,6 +44,7 @@ public class DefaultColumnCandidateProviderTest {
 class TestModel {
     private Long field1;
     private String fff2;
+    @SuppressWarnings("unused")
     private Integer filedApple333;
 
     public String getSomeGetter() {

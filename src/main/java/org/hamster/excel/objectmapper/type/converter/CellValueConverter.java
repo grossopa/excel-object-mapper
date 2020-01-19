@@ -3,6 +3,8 @@
  */
 package org.hamster.excel.objectmapper.type.converter;
 
+import org.hamster.excel.objectmapper.util.CellValueType;
+
 /**
  * Converts the object into target type, see each implementation
  *
@@ -11,7 +13,7 @@ package org.hamster.excel.objectmapper.type.converter;
  * @since 1.0
  */
 public interface CellValueConverter<T, R> {
-    
+
     /**
      * 
      * 
@@ -19,7 +21,7 @@ public interface CellValueConverter<T, R> {
      * @return
      */
     boolean needProcess(Class<?> clazz);
-    
+
     /**
      * 
      * 
@@ -27,4 +29,6 @@ public interface CellValueConverter<T, R> {
      * @return
      */
     R process(T object);
+
+    CellValueType getCellValueType();
 }

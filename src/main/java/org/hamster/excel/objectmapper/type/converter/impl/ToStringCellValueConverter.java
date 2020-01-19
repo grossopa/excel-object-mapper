@@ -4,6 +4,7 @@
 package org.hamster.excel.objectmapper.type.converter.impl;
 
 import org.hamster.excel.objectmapper.type.converter.CellValueConverter;
+import org.hamster.excel.objectmapper.util.CellValueType;
 
 /**
  *
@@ -21,6 +22,11 @@ public class ToStringCellValueConverter implements CellValueConverter<Object, St
     @Override
     public String process(Object object) {
         return object.toString();
+    }
+
+    @Override
+    public CellValueType getCellValueType() {
+        return CellValueType.STRING;
     }
 
 }

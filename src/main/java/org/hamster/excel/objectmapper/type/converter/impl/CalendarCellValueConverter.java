@@ -3,6 +3,9 @@
  */
 package org.hamster.excel.objectmapper.type.converter.impl;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.hamster.excel.objectmapper.type.converter.AbstractClassCellValueConverter;
 import org.hamster.excel.objectmapper.util.CellValueType;
 
@@ -12,23 +15,23 @@ import org.hamster.excel.objectmapper.util.CellValueType;
  * @author Yin, Jack
  * @since 1.0
  */
-public class NumericCellValueConverter extends AbstractClassCellValueConverter<Number, Double> {
+public class CalendarCellValueConverter extends AbstractClassCellValueConverter<Calendar, Date> {
 
     /**
      * @param desiredClass
      */
-    public NumericCellValueConverter() {
-        super(Number.class);
+    protected CalendarCellValueConverter() {
+        super(Calendar.class);
     }
 
     @Override
-    public Double process(Number object) {
-        return object.doubleValue();
+    public Date process(Calendar object) {
+        return object.getTime();
     }
 
     @Override
     public CellValueType getCellValueType() {
-        return CellValueType.NUMERIC;
+        return CellValueType.DATE;
     }
 
 }
