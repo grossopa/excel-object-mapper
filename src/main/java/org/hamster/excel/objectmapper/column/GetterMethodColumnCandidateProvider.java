@@ -37,7 +37,8 @@ public class GetterMethodColumnCandidateProvider implements ColumnCandidateProvi
                 .filter(m -> p.matcher(m.getName()).matches()).map(m -> {
                     String mn = m.getName();
                     String name = mn.startsWith("is") ? mn.substring(2) : mn.substring(3);
-                    return new ColumnCandidate(uncapitalize(name), m.getReturnType(), new MethodValueExtractor(m));
+                    return new ColumnCandidate(uncapitalize(name), name, m.getReturnType(),
+                            m.getGenericParameterTypes(), new MethodValueExtractor(m));
                 }).collect(toList());
     }
 
