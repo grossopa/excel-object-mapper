@@ -36,11 +36,13 @@ public class ObjectDetailsBuilder {
                 } else {
                     children.add(from((Class<?>) candidate.getGenericTypes()[0]));
                 }
-
+            } else {
+                columnDetails.add(e)
             }
         });
 
         return new ObjectDetails(null, children);
 
     }
+
 }
