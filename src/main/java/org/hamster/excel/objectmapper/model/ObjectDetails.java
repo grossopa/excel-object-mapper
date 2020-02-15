@@ -17,6 +17,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class ObjectDetails {
+    private final ColumnCandidate parentCandidate;
     private final List<ColumnDetails> columns;
     private final List<ObjectDetails> children;
 }

@@ -19,7 +19,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public class ColumnDetails {
     private final String headerName;
-    private final CellValueType valueType;
+    private final Class<?> valueClass;
     private final ValueExtractor<?> valueExtractor;
 
 }

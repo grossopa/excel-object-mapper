@@ -19,5 +19,7 @@ public class ExcelObjectMapperConfig {
 
     public static final ExcelObjectMapperConfig buildDefault() {
         ExcelObjectMapperConfig config = new ExcelObjectMapperConfig();
+
+        return config;
     }
 }
